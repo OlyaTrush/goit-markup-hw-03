@@ -8,6 +8,7 @@
   --bg-btn-portfolio: #F5F4FA;
   --text-btn-color: rgba(0, 0, 0, 0.15);
   --card-color: #EEEEEE;
+  --border-color:#ECECEC;
 }
 
 body {
@@ -20,14 +21,11 @@ letter-spacing: 0.03em;
 p, h1, h2, h3, ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 img {
   display: block;
-}
-
-section {
-  margin: 94px 0;
 }
 
 .container {
@@ -38,11 +36,18 @@ section {
   padding-right: 15px;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* Header conteiner*/
 header {
   display: flex;
   align-items: center;
   margin: auto;
+  border-bottom: 1px solid var(--border-color);
+
+
 }
 .header-container {
   display: flex;
@@ -56,9 +61,9 @@ header {
 }
 
 .logo {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+margin-right: 93px;
+padding-top: 24px;
+padding-bottom: 25px;
 
 font-family: 'Raleway';
 font-weight: 700;
@@ -103,7 +108,6 @@ text-decoration: none;
 .contacts {
   display: flex;
   align-items: center;
-  list-style: none;
   padding-left: 0;
   margin: 0;
 }
@@ -130,17 +134,12 @@ text-decoration: none;
   color:var(--accent-color);
 }
 
-.list{
-  list-style: none;
-}
-
 /* main conteiner index */
 .hero-title-button{
 background: var(--dark-bg-color);
-display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 200px 452px 280px 452px;
+align-items: center;
+padding-top: 200px;
+padding-bottom: 200px;
 }
 
 .title-container {
@@ -150,7 +149,7 @@ display: flex;
 }
 
 .hero-title{
-  margin: 0 0 30px;
+  margin: 0 auto;
   width: 696px;
 font-weight: 900;
 font-size: 44px;
@@ -183,7 +182,7 @@ border-radius: 4px;
 .second-title{
 font-weight: 700;
 font-size: 36px;
-line-height: 1.166px;
+line-height: 1.166;
 text-align: center;
 color: var(--title-text-color)
 }
@@ -198,7 +197,7 @@ color: var(--title-text-color);
 
 .member-title {
 font-weight: 700;
-font-size: 14px;
+font-size: 16px;
 line-height: 1.142;
 color: var(--title-text-color);
 text-align:center
@@ -210,7 +209,15 @@ text-align:center
 }
 
 .hidden-title{
-  display: none
+  display: none;
+     position: absolute;    
+      width: 1px;    
+       height: 1px;   
+      margin: -1px;   
+       padding: 0;    
+        overflow: hidden;   
+          border: 0;    
+           clip: rect(0 0 0 0); 
 }
 
 .portfolio-title {
@@ -224,10 +231,6 @@ text-align:center
 /*about product section*/
 .product-list {
   display: flex;
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 94px;
 }
 
 .product-list> li:not(:last-child) {
@@ -240,25 +243,16 @@ text-align:center
   color: var(--text-color);
 }
 
-.project-section {
-  margin-top: 0;
-}
 .project-title {
-  margin-top: 0;
   margin-bottom: 50px;
 }
 .project-list {
   display: flex;
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
-.projects-list > li:not(:last-child) {
+.project-list> li:not(:last-child) {
   margin-right: 30px;
 }
-
 .team-section {
   background-color: var(--bg-btn-portfolio);
   margin-top: 0;
@@ -266,17 +260,10 @@ text-align:center
 }
 
 .team-title {
-  padding-top: 94px;
-  margin-top: 0;
   margin-bottom: 50px;
 }
 .team-list {
   display: flex;
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  padding-bottom: 94px;
 }
 
 .our-team-p{
@@ -310,11 +297,8 @@ width: 270px;
 }
 
 .buttons-list {
-  list-style: none;
-  padding-left: 0;
   display: flex;
   justify-content: center;
-  margin-top: 94px;
   margin-bottom: 50px;
 }
 .buttons-list >li:not(:last-child) {
@@ -342,12 +326,8 @@ width: 270px;
   }
 
   .portfolio-list {
-    list-style: none;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
   }
 
   .portfolio-card {
@@ -356,8 +336,6 @@ width: 270px;
     margin-bottom: 30px;
   
     background: var(--native-color);
-    border: 1px solid var(--card-color);
-    box-sizing: border-box;
 
   }
   .portfolio-card:nth-child(3n) {
@@ -370,6 +348,9 @@ width: 270px;
   
 .image-card {
 padding: 20px 24px 20px 24px;
+border-bottom: 1px solid var(--card-color);
+border-left: 1px solid var(--card-color);
+border-right: 1px solid var(--card-color);
   }
 
 .photoes-p{
@@ -387,8 +368,8 @@ color: var(--text-color);
 
 .logof {
   display: inline-block;
+  padding-bottom: 20px;
   padding-top: 60px;
-  margin-bottom: 20px;
   font-family: 'Raleway';
 font-weight: 700;
 font-size: 26px;
@@ -399,17 +380,8 @@ color: var(--accent-color)
 
 .footer-conteiner{
 background: var(--dark-bg-color);
-}
-
-.footer-conteiner.portfolio{
-  margin-top: 94px;
-}
-.adress-list {
-  list-style: none;
-  padding-left: 0;
-  padding-bottom: 60px;
-  margin-top: 0;
-  margin-bottom: 0;
+padding-top: 60px;
+padding-bottom: 60px;
 }
 
 .contact-conteiner{
@@ -430,7 +402,6 @@ text-decoration: none;
   display: inline-block;
 }
 
-.address-list > li:not(:last-child) {
+.adress-list> li:not(:last-child) {
   margin-bottom: 9px;
 }
-
