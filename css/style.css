@@ -161,6 +161,7 @@ text-transform: uppercase;
 }
 
 .button-hero{
+  margin-top: 30px;
 padding: 10px 32px;
 border: none;
 cursor: pointer;
@@ -196,7 +197,7 @@ color: var(--title-text-color);
 }
 
 .member-title {
-font-weight: 700;
+font-weight: 500;
 font-size: 16px;
 line-height: 1.142;
 color: var(--title-text-color);
@@ -228,6 +229,10 @@ text-align:center
 }
 
 /*about product section*/
+.project-section {
+  padding-top: 0;
+}
+
 .product-list {
   display: flex;
 }
@@ -288,6 +293,7 @@ width: 270px;
 .member-card {
   padding-top: 30px;
   padding-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* main conteiner portfolio */
@@ -367,8 +373,7 @@ color: var(--text-color);
 
 .logof {
   display: inline-block;
-  padding-bottom: 20px;
-  padding-top: 60px;
+  margin-bottom: 20px;
   font-family: 'Raleway';
 font-weight: 700;
 font-size: 26px;
